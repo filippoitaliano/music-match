@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Dashboard{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% if g.user.youtube_credentials %}
+    <p>Youtube connected ✔</p>
+  {% else %}
+    <a href="http://127.0.0.1:5000/auth/connect-youtube">Connect Youtube</a>
+  {% endif %}
+  {% if g.user.spotify_credentials %}
+    <p>Spotify connected ✔</p>
+  {% else %}
+    <a href="http://127.0.0.1:5000/auth/connect-spotify">Connect Spotify</a>
+  {% endif %}
+{% endblock %}

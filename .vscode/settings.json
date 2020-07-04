@@ -1,3 +1,8 @@
 {
-  "python.pythonPath": "flask-service\\venv\\Scripts\\python.exe"
+  "python.pythonPath": "flaskservice\\venv\\Scripts\\python.exe",
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint-flask"
+  ],
+  "editor.tabSize": 4
 }
